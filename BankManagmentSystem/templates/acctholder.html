@@ -1,0 +1,114 @@
+{% include 'common.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bank User Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    .action-buttons {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .action-buttons a {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 0 10px;
+      font-size: 16px;
+      background-color: #3aa0e4;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+
+    .action-buttons a:hover {
+      background-color: #0959a3;
+    }
+
+	.action-buttons a {
+		display: inline-block;
+		padding: 10px 20px;
+		margin: 0 10px;
+		font-size: 16px;
+		background-color: #3aa0e4;
+		color: white;
+		text-decoration: none;
+		border-radius: 4px;
+	  }
+  
+	  .action-buttons a:hover {
+		background-color: #0959a3;
+	  }
+  </style>
+</head>
+<body>
+    <center>
+	<div class="container">
+    {% for user in users %}
+		<h1>Welcome {{user.name}}</h1><br><br>
+    <h1 style="color:tomato">{{msg}}</h1>
+
+		<table>
+			<tr>
+				<th>Account NO</th>
+        		<th>Name</th>
+        		<th>Email</th>
+        		<th>Password</th>
+        		<th>Adhaar No</th>
+        		<th>Address</th>
+        		<th>Contact</th>
+            <th>Account type</th>
+            <th>Balance</th>
+			</tr>
+		
+        <tr>
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.password1}}</td>
+            <td>{{user.aadhaar}}</td>
+            <td>{{user.address}}</td>
+            <td>{{user.phone}}</td>
+            <td>{{user.acc_typ}}</td>
+            <td>{{user.balance}}</td>
+        </tr>
+		</table>
+	</div>
+    <div class="action-buttons">
+		<a href="/withdraw/{{user.id}}">Withdraw</a>
+		<a href="/deposit/{{user.id}}">Deposit</a>
+    <a href="/transact_user/{{user.id}}">Transactions</a>
+	</div>
+  {% endfor %}
+</body>
+</html>

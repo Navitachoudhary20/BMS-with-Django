@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login Form</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: #f2f2f2;
+		}
+		.container {
+			max-width: 500px;
+			margin: 0 auto;
+			background-color: #fff;
+			padding: 20px;
+			border-radius: 5px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		}
+		h1 {
+			text-align: center;
+			margin-bottom: 20px;
+		}
+		label {
+			display: block;
+			font-weight: bold;
+			margin-bottom: 5px;
+		}
+		input[type="text"], input[type="password"] {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 20px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			box-sizing: border-box;
+			font-size: 16px;
+		}
+		input[type="submit"] {
+			background-color: #3aa0e4;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			font-size: 16px;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+		input[type="submit"]:hover {
+			background-color: #0959a3;
+			transition: background-color 0.3s ease;
+		}
+		@media (max-width: 600px) {
+			.container {
+				max-width: 90%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Enter Amount</h1>
+		<form action="/dep_trans/{{user.id}}" method="post">
+			{% csrf_token %}
+
+			<center><h2 style="color:tomato">{{msg}}</h2></center>
+			<center><h3>Your Available balance is {{user.balance}}</h3></center>
+
+			<label for="widraw">Deposit:</label>
+			<input type="text" id="deposit" name="dep_amt" placeholder="Enter Amout for Deposit" required>
+
+			<input type="Submit" >
+		</form>
+	</div>
+</body>
+</html>

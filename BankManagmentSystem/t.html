@@ -1,0 +1,163 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>School Management System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #444;
+      color: #fff;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    nav ul li {
+      display: inline;
+    }
+
+    nav ul li a {
+      display: block;
+      color: #fff;
+      padding: 10px;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 20px;
+      margin: 20px;
+      background-color: #f2f2f2;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>School Management System</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Students</a></li>
+      <li><a href="#">Teachers</a></li>
+      <li><a href="#">Courses</a></li>
+      <li><a href="#">Attendance</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <h2>Welcome to the School Management System</h2>
+    <p>This system allows you to manage students, teachers, courses, and attendance in your school.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 School Management System. All rights reserved.</p>
+  </footer>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create Course - School Management System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"], select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    input[type="submit"] {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 8px 16px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 14px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>Create Course</h1>
+
+  <form>
+    <div class="form-group">
+      <label for="courseName">Course Name:</label>
+      <input type="text" id="courseName" name="courseName" required>
+    </div>
+
+    <div class="form-group">
+      <label for="teacher">Teacher:</label>
+      <select id="teacher" name="teacher" required>
+        <option value="">Select Teacher</option>
+        <option value="1">Mr. Johnson</option>
+        <option value="2">Ms. Anderson</option>
+        <!-- Add more options for additional teachers -->
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" rows="4"></textarea>
+    </div>
+
+    <input type="submit" value="Create Course">
+  </form>
+</body>
+</html>
